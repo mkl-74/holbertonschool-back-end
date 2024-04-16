@@ -21,8 +21,7 @@ if __name__ == '__main__':
     api_user_dict = {'id': arg}
 
     # add it to url
-    user_url = get('https://jsonplaceholder.typicode.com/users',
-                params=api_user_dict)
+    user_url = get('https://jsonplaceholder.typicode.com/users', params=api_user_dict)  # noqa
     user = user_url.json()
 
     # define the variables
@@ -44,11 +43,7 @@ if __name__ == '__main__':
                 completed += 1
                 NUMBER_OF_DONE_TASKS_title.append(j.get('title'))
 
-
-    print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
-                                                        completed,
-                                                        TOTAL_NUMBER_OF_TASKS
-                                                        ))
+    print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME, completed, TOTAL_NUMBER_OF_TASKS))  # noqa
 
     for i in NUMBER_OF_DONE_TASKS_title:
         print("{} {}".format('\t', i))
