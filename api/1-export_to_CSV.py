@@ -23,8 +23,7 @@ if __name__ == '__main__':
     api_user_dict = {'id': var}
 
     # add it to url
-    user_url = get('https://jsonplaceholder.typicode.com/users',
-                params=api_user_dict)
+    user_url = get('https://jsonplaceholder.typicode.com/users', params=api_user_dict)  # noqa
     user = user_url.json()
 
     # find the value of the username
